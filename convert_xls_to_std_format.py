@@ -4,14 +4,25 @@ import xlrd
 def build_json_from_row(row, iterator):
     sub_json = {}
     next_row = iterator.next()
-    if next_row[2] == "":
+    if row[2] == u"Total":
         return row[5], next_row
+    if next_row[2] == "":
+        if row[5] == "":
+            json, nrow = build_json_from_row(next_row, iterator)
+            return {sub_json[next_row[1]] :json} , nrow
+        return row[5], next_row
+    else:
+        json, nrow = build_json_from_row(next_row, iterator)
+        return {sub_json[next_row[1]] :json} , nrow
+
 
 def build_json():
     json_artifact = {}
     row_iterator = get_worksheet_row()
     row = row_iterator.next()
     json_artifact[row[1]], next_row = build_json_from_row(row, row_iterator)
+    if next_row:
+        json_artifact[next_row[1]], next_row = build_json_from_row(next_row, row_iterator)
     print json_artifact
 
 def main():
