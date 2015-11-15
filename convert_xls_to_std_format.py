@@ -1,9 +1,7 @@
-from collections import OrderedDict
 import xlrd
 
 
 def build_json_from_row(row, iterator):
-    sub_json = {}
     next_row = iterator.next()
     if row[2] == u"Total":
         return row[5], next_row
@@ -21,19 +19,19 @@ def build_json_from_row(row, iterator):
     else:
         inner_json = {}
         nrow = next_row
+        if nrow[1] == "" :
+            return get_sub_cat_total(iterator, nrow)
         while nrow and (nrow[1] != "Total-" + row[1] and nrow[5] != ""):
             inner_json[nrow[1]], nrow = get_sub_cat_total(iterator, nrow)
 
         if nrow:
             if nrow[5] != "":
                 inner_json[nrow[1]] = nrow[5]
-            nrow = iterator.next()
+                nrow = iterator.next()
         return inner_json, nrow
 
 
 def get_sub_cat_total(iterator, row):
-    # json, nrow = build_json_from_row(next_row, iterator)
-    # return {sub_json[next_row[1]]: json}, nrow
     next_row = iterator.next()
     while next_row and next_row[1] == "":
         row = next_row
@@ -64,18 +62,4 @@ def get_worksheet_row():
     yield None
 
 
-#
 main()
-
-
-# {
-#     "Secretariat - Economic Services": "81.93",
-#     "Krishonnati Yojana (Central) - Crop Husbandry" : {
-#         "Seeds":{
-#             "Development and strengthening of seed infrastructure facilities for production and distribution of Seeds": "224.23",
-#             "Sub-Mission on Seeds and Planting Material": "0",
-#             "Other Programmes": "17.46",
-#             "total" : "241.69"
-#         }
-#     }
-# }
