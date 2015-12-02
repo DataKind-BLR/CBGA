@@ -25,8 +25,15 @@ Few of the visualization exercise which CBGA expects DataKind to help with which
 ###Technical approach
 <b> Tasks break-up </b>
 ####1. Data Conversion
-####2. Data Extraction</b>
-####3. Data Visualization</b>
+       Algorithm has been developed which would convert all the budget documents in PDF format to CSV format
+       <Gaurav to add more technical details here>
+####2. Data Extraction
+       The data required for to build the insightful visualization has been extracted from the initially provided expenditure budget         documents in excel format.
+       <Deepthi to add more technical details here>
+       
+####3. Data Visualization
+       Designs to visualize the budget data provided at different levels are proposed. Implementation to be done during the Data Dive.
+       D3.js is the proposed library to build visualization
 
 
 
