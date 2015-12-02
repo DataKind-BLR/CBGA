@@ -16,6 +16,7 @@ The proposed Budget portal is intended to consist some insightful Visualizations
 VISUALIZATIONS – Visualizations created by us using relevant budget data for various levels of governance (addressing questions like, 
 “Where is the Money Coming From?”, “Where is the Money Going?”, and so on)
 
+###DataKind scope in Data Viz development
 Few of the visualization exercise which CBGA expects DataKind to help with which can be later integrated with the budget portal:
 1) BE, RE and Actuals for all Departments as given under Part A of 'Expenditure Budget', 'Volume II' of the Union Budget.  Actual figures are available from 2009-10 to 2013-14. BE and RE for 2014-15 and BE for 2015-16. Please note that Part B and C have figures for Public Sector Units and SHOULD NOT be included. There will be some chopping and changing between Departments as well. Some Ministries will only have a single Department.
 2) Difference between BE & Actuals, RE & Actuals and BE & RE for all Departments during the same time period.
