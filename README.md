@@ -23,10 +23,10 @@ Few of the visualization exercise which CBGA expects DataKind to help with which
 3) Keep focus on Agricultural department
 
 ###Technical approach
-<b> Tasks break-up </b>
-1. Data Conversion
-2. Data Extraction
-3. Data Visualization
+<h> Tasks break-up </h>
+<b>1. Data Conversion</b>
+<b>2. Data Extraction</b>
+<b>3. Data Visualization</b>
 
 
 
