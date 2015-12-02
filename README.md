@@ -3,6 +3,7 @@
 Center for Budget and Governance Accountability (CBGA) is a policy research and advocacy organisation based in New Delhi. 
 It analyses public policies and government finances in India, and advocates for greater transparency, accountability and public participation in budget processes.
 
+##Project - Open Budget Portal
 The organisation is aimed to develop a Comprehensive and User-Friendly Data Portal on Budgets in India, 
 which could provide the citizens free, easy and timely access to relevant data on budgets at various levels of governance in the country. 
 Such a Portal can augment considerably the use of appropriate budget data by researchers, policy analysts and journalists, which in turn could 
@@ -10,6 +11,7 @@ generate a lot more useful inputs for policy and budget formulation in the count
 Moreover, such a Portal, over time, can also boost significantly the engagement of common citizens in budget processes, which in turn could
 strengthen public monitoring and social accountability in the process of implementation of the budgetary policies in the country.
 
+##Data Viz for the Budget Portal
 The proposed Budget portal is intended to consist some insightful Visualizations along with other useful features.
 VISUALIZATIONS – Visualizations created by us using relevant budget data for various levels of governance (addressing questions like, 
 “Where is the Money Coming From?”, “Where is the Money Going?”, and so on)
