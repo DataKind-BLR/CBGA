@@ -24,9 +24,9 @@ Few of the visualization exercise which CBGA expects DataKind to help with which
 
 ###Technical approach
 <b> Tasks break-up </b>
-#1. Data Conversion
-#2. Data Extraction
-#3. Data Visualization
+1. Data Conversion
+2. Data Extraction
+3. Data Visualization
 
 
 
