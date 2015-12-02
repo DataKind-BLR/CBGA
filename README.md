@@ -1,5 +1,5 @@
 # CBGA
-Organization’s Mission
+##Organization’s Mission
 Center for Budget and Governance Accountability (CBGA) is a policy research and advocacy organisation based in New Delhi. 
 It analyses public policies and government finances in India, and advocates for greater transparency, accountability and public participation in budget processes.
 
