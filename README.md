@@ -22,5 +22,8 @@ Few of the visualization exercise which CBGA expects DataKind to help with which
 2) Difference between BE & Actuals, RE & Actuals and BE & RE for all Departments during the same time period.
 3) Keep focus on Agricultural department
 
+###Technical approach
+<b> Tasks break-up </b>
+
 
 
