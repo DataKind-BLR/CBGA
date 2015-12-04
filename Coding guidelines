@@ -1,0 +1,13 @@
+Note: 
+Keep data and code separate
+Maintain meaningful comments while pushing the code to github
+
+Python guidelines:
+https://www.python.org/dev/peps/pep-0008/
+
+D3.js guidelines(JS + CSS):
+Follows JS guidelines
+https://google.github.io/styleguide/javascriptguide.xml
+
+Follow CSS guidelines
+https://google.github.io/styleguide/htmlcssguide.xml
