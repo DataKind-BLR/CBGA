@@ -33,7 +33,31 @@ Few of the visualization exercise which CBGA expects DataKind to help with which
        
 ####3. Data Visualization
        Designs to visualize the budget data provided at different levels are proposed. Implementation to be done during the Data Dive.
-       D3.js is the proposed library to build visualization
-
+       D3.js is one of the options to build visualization
+       
+       D3.js is very comprehensive and difficult to master.
+       D3.js Possible visualizations available at
+              http://christopheviau.com/d3list/gallery.html
+              https://github.com/mbostock/d3/wiki/Gallery
+       
+       NVD3 is a chart specific js library built on top of d3 (which will be most relevant for this project)
+              http://nvd3.org/
+              http://nvd3.org/examples/index.html  (This link has examples. Much easier to implement than what to be done in d3)
+              
+       Other charting js libraries which can be explored are HighCharts, PolyCharts
+       
+       Options in R
+              1. ggplot library 
+                     https://plot.ly/ggplot2/           (Examples)
+                     http://ggplot2.org/
+                     https://cran.r-project.org/web/packages/ggplot2/index.html
+                     
+              2. rCharts library
+                     http://rcharts.io/
+                     http://rcharts.io/gallery/
+                     
+              3. googleVis library
+                     https://cran.r-project.org/web/packages/googleVis/vignettes/googleVis.pdf
+                     http://rpubs.com/gallery/googleVis
 
 
