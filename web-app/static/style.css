@@ -1,0 +1,16 @@
+body {
+  background-color: #212121;
+}
+
+.mdl-layout__drawer {
+  border-right: 0px;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link {
+  color: #fff;
+}
+
+.mdl-layout__drawer .mdl-navigation .mdl-navigation__link:hover {
+  color: #000;
+  background-color: #fff;
+}
