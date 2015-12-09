@@ -7,25 +7,26 @@ LICENSE: MIT
 '''
 import sys
 import pandas as pd
-from slugify import Slugify
+from slugify import slugify
 
 
-def sequences(df):
+def sequences(df, filename="out"):
     '''Sequences routine to convert to sequences.csv'''
-    slug = Slugify(to_lower=True)
+    # slug = slugify(to_lower=True)
 
-    s, c = 'sequences', 'Actual 2012-2013 Total'
+    s, c = 'sequences', df.columns[5]
     df[s] = pd.Series([])
     for i, row in df.iterrows():
-        df.loc[i, s] = slug(row.parent1)
+        df.loc[i, s] = slugify(unicode(row.parent1))
         if row.parent1 != row.parent2:
-            df.loc[i, s] = df.loc[i, s] + '|' + slug(row.parent2)
+            df.loc[i, s] = df.loc[i, s] + '|' + slugify(unicode(row.parent2))
         if row.parent2 != row.parent3:
-            df.loc[i, s] = df.loc[i, s] + '|' + slug(row.parent3)
-        if row.parent3 != row['Scheme Name']:
-            df.loc[i, s] = df.loc[i, s] + '|' + slug(row['Scheme Name'])
+            df.loc[i, s] = df.loc[i, s] + '|' + slugify(unicode(row.parent3))
+        if row.parent3 != row['Scheme']:
+            df.loc[i, s] = df.loc[i, s] + '|' + slugify(unicode(row['Scheme']))
 
-    df[df[c] > 0][[s, c]].to_csv('sequences.csv', index=False, header=False)
+    df[df[c] > 0][[s, c]].to_csv(filename + '.sequences.csv', index=False, header=False)
+
 
 if __name__ == '__main__':
     sequences(pd.read_csv(sys.argv[1]))
