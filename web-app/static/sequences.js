@@ -32,11 +32,13 @@ var arc = d3.svg.arc()
 
 // Use d3.text and d3.csv.parseRows so that we do not need to have a header
 // row, and can receive the csv as an array of arrays.
-d3.text("data/sequences.csv", function(text) {
-  var csv = d3.csv.parseRows(text);
-  var json = buildHierarchy(csv);
-  createVisualization(json);
-});
+if(document_name != "") {
+    d3.text("data/"+document_name, function(text) {
+      var csv = d3.csv.parseRows(text);
+      var json = buildHierarchy(csv);
+      createVisualization(json);
+    });
+}
 
 // Main function to draw and set up the visualization, once we have the data.
 function createVisualization(json) {
