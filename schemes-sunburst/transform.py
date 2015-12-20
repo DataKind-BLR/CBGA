@@ -22,7 +22,6 @@ def flatten(df, filename="out"):
     df = df.dropna(subset=['Index'], how='all')
     df.Index = df.Index.astype(str)
     df['Index'] = df['Index'].apply(remove_trailing_zeroes)
-
     # print df['Index']
     # create (level - 1) parent columns
     # TODO: cleverly compute levels automatically
@@ -47,23 +46,23 @@ def flatten(df, filename="out"):
                         df[df['Index'] == par]['Scheme'].iloc[0]
                     except IndexError:
                         par += '.'
-                # print par, df[df['Index'] == par]
                 par = df[df['Index'] == par]['Scheme'].iloc[0]
                 df.loc[df['Index'] == i, 'parent{}'.format(p)] = par
-
     # drop the parents
     # (those that do not have budget details)
     df = df.dropna(subset=[df.columns[5]], how='all')
 
-    # everyone has parents
-    # top most schemes are their own parents
+    # # everyone has parents
+    # # top most schemes are their own parents
     for l in range(2, levels):
+        # print l
         col = 'parent{}'
         df[col.format(l)] = df[col.format(l)].fillna(df[col.format(l - 1)])
+        # print df
 
-    # lazy to write a better line, this will do for now
+    # # lazy to write a better line, this will do for now
     df = df.replace('...', 0).replace('... ', 0)
-    # save the results, phew
+    # # save the results, phew
     df.to_csv(filename + '.clean.csv', index=False)
 
 if __name__ == '__main__':
